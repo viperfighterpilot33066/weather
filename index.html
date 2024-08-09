@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="menu">
+        <button class="menu-button" onclick="toggleMenu()">☰ Menu</button>
+        <div class="menu-content" id="menuContent">
+            <a href="#" onclick="openTab(event, 'Weather')">Weather</a>
+            <a href="#" onclick="openTab(event, 'Radar')">Radar</a>
+            <a href="#" onclick="openTab(event, 'Settings')">Settings</a>
+            <a href="#" onclick="openTab(event, 'News')">News</a>
+        </div>
+    </div>
+
+    <div class="search" id="searchBar">
+        <input type="text" class="search-bar" placeholder="Search for a city...">
+        <button>Search</button>
+    </div>
+
+    <div id="Weather" class="tabcontent active">
+        <div class="card weather loading">
+            <h2 class="city">Weather in...</h2>
+            <img src="" class="icon" alt="">
+            <p class="description"></p>
+            <p class="temp"></p>
+            <p class="high-low"></p>
+            <p class="humidity"></p>
+            <p class="pressure"></p>
+            <p class="wind"></p>
+            <p class="sunrise"></p>
+            <p class="sunset"></p>
+            <p class="cloudiness"></p>
+            <p class="precipitation"></p>
+            <p class="air-quality"></p>
+        </div>
+    </div>
+
+    <div id="Radar" class="tabcontent">
+        <h2>Interactive Radar</h2>
+        <iframe id="radarFrame" src="" width="100%" height="450" frameborder="0"></iframe>
+    </div>
+
+    <div id="Settings" class="tabcontent">
+        <h2>Settings</h2>
+        <label for="geolocation">Enable Geolocation:</label>
+        <input type="checkbox" id="geolocation" onchange="toggleGeolocation()" checked>
+        <select class="units" onchange="saveUnits()">
+            <option value="metric">°C</option>
+            <option value="imperial">°F</option>
+        </select>
+        <label for="theme">Theme:</label>
+        <select id="theme" onchange="changeTheme()">
+            <option value="default">Default</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+        </select>
+    </div>
+
+    <div id="News" class="tabcontent">
+        <h2>Latest News</h2>
+        <div id="newsContent">
+            <!-- News articles will be dynamically added here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

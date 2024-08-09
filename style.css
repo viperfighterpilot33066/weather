@@ -1,0 +1,331 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+body.light-mode {
+    background: #f0f0f0;
+    color: #000;
+}
+
+body.light-mode .menu-button,
+body.light-mode .menu-content,
+body.light-mode .search button,
+body.light-mode .tablink,
+body.light-mode .units,
+body.light-mode .geolocation {
+    background-color: #ddd;
+    color: #000;
+}
+
+body.light-mode .card {
+    background: #ffffffd0;
+    color: #000;
+}
+
+body.dark-mode {
+    background: #222;
+    color: white;
+}
+
+body.dark-mode .menu-button,
+body.dark-mode .menu-content,
+body.dark-mode .search button,
+body.dark-mode .tablink,
+body.dark-mode .units,
+body.dark-mode .geolocation {
+    background-color: #555;
+    color: white;
+}
+
+body.dark-mode .card {
+    background: #000000d0;
+    color: white;
+}
+
+.menu {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.menu-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.menu-content {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.menu-content a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+}
+
+.menu-content a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.search-bar {
+    width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.search button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+}
+
+.tabcontent.active {
+    display: block;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.loading {
+    display: none;
+}
+
+.weather.loading {
+    display: block;
+}
+
+.weather img {
+    width: 100px;
+    height: 100px;
+}
+
+.units {
+    margin-top: 10px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+#radarFrame {
+    border: none;
+}
+
+#searchBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: #222;
+    background-image: url('https://source.unsplash.com/1600x900/?landscape');
+    font-size: 100%;
+}
+
+.card {
+    background: #000000d0;
+    color: white;
+    padding: 1em;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 400px;
+    margin: 1em;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 1em;
+    background: #333;
+}
+
+button {
+    margin: 0.5em;
+    border-radius: 50%;
+    border: none;
+    height: 44px;
+    width: 44px;
+    outline: none;
+    background: #7c7c7c2b;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+input.search-bar {
+    border: none;
+    outline: none;
+    padding: 0.4em 1em;
+    border-radius: 24px;
+    background: #7c7c7c2b;
+    color: white;
+    font-family: inherit;
+    font-size: 100%;
+    width: calc(100% - 100px);
+}
+
+button:hover {
+    background: #7c7c7c6b;
+}
+
+h1.temp {
+    margin: 0;
+    margin-bottom: 0.4em;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.description {
+    text-transform: capitalize;
+    margin-left: 8px;
+}
+
+.weather.loading {
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+}
+
+.weather.loading:after {
+    visibility: visible;
+    content: "Loading...";
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 20px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.tablink {
+    background-color: #555;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+    flex: 1;
+    text-align: center;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+.tabcontent {
+    display: none;
+    width: 100%;
+    max-width: 400px;
+}
+
+.tabcontent.active {
+    display: block;
+}
+
+.units, .geolocation {
+    margin-top: 1em;
+    padding: 0.5em;
+    border-radius: 5px;
+    background: #7c7c7c2b;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    max-width: 200px;
+}
+
+.units:hover, .geolocation:hover {
+    background: #7c7c7c6b;
+}
+
+.menu {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.menu-button {
+    background-color: #555;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-content {
+    display: none;
+    position: absolute;
+    background-color: #555;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.menu-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.menu-content a:hover {
+    background-color: #777;
+}
